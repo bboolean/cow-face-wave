@@ -1,8 +1,6 @@
 (ns cow-face-wave.core
   (:gen-class))
 
-(def number (atom 0))
-
 (defn makeln [a]
   (as-> a $
     (Math/sin $)
@@ -14,14 +12,13 @@
     (clojure.string/join " " $)
     (str "   " $ "🐮")))
 
-(defn print-loop []
+(defn print-loop [number]
   (do
-    (println (makeln @number))
-    (swap! number #(+ %1 0.2))
+    (println (makeln number))
     (Thread/sleep 50)
-    (print-loop)))
+    (print-loop (+ number 0.2))))
 
 (defn -main
   "Print out cow faces in a sinusoidal way"
   [& args]
-  (print-loop))
+  (print-loop 0))
