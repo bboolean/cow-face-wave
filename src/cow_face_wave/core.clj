@@ -4,12 +4,12 @@
 (defn make-line [number]
   (as-> number $
     (Math/sin $)
-    (* 10 $)
-    (+ 10 $)
+    (* 20 $)
+    (+ 20 $)
     (Math/round $)
     (range $)
     (map (fn [_] (str " ")) $)          ;
-    (clojure.string/join " " $)
+    (clojure.string/join "" $)
     (str "   " $ "🐮")))
 
 (defn print-loop [number]
