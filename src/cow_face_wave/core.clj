@@ -1,20 +1,20 @@
 (ns cow-face-wave.core
   (:gen-class))
 
-(defn makeln [a]
-  (as-> a $
+(defn make-line [number]
+  (as-> number $
     (Math/sin $)
     (* 10 $)
     (+ 10 $)
     (Math/round $)
     (range $)
-    (map (fn [a] (str " ")) $)
+    (map (fn [_] (str " ")) $)          ;
     (clojure.string/join " " $)
     (str "   " $ "🐮")))
 
 (defn print-loop [number]
   (do
-    (println (makeln number))
+    (println (make-line number))
     (Thread/sleep 50)
     (print-loop (+ number 0.2))))
 
