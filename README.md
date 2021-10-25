@@ -1,32 +1,18 @@
 # cow-face-wave
 
-FIXME: description
+Print out cow faces in a sinusoidal fashion
 
-## Installation
+## Run
 
-Download from http://example.com/FIXME.
+```
+$ lein run
+```
 
-## Usage
+## Tests
 
-FIXME: explanation
-
-    $ java -jar cow-face-wave-0.1.0-standalone.jar [args]
-
-## Options
-
-FIXME: listing of options this app accepts.
-
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
+```
+$ lein test
+```
 
 ## License
 
