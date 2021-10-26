@@ -8,7 +8,7 @@
     (+ 20 $)
     (Math/round $)
     (range $)
-    (map (fn [_] (str " ")) $)          ;
+    (map (fn [_] (str " ")) $)
     (clojure.string/join "" $)
     (str "   " $ "🐮")))
 
