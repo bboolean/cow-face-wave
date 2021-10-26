@@ -19,6 +19,6 @@
     (print-loop (+ number 0.2))))
 
 (defn -main
-  "Print out cow faces in a sinusoidal way"
+  "Print out cow faces in a sinusoidal fashion"
   [& args]
   (print-loop 0))
